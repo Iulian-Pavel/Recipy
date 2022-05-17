@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.ingredient_search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Raleway", sans-serif;
+  /* Active state */
+}
+
+.ingredient_search .search-bar input,
+.ingredient_search .search-btn,
+.ingredient_search .search-btn:before,
+.ingredient_search .search-btn:after {
+  -webkit-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+}
+
+.ingredient_search .search-bar input,
+.ingredient_search .search-btn {
+  width: 3em;
+  height: 3em;
+}
+
+.ingredient_search .search-bar input:invalid:not(:focus),
+.ingredient_search .search-btn {
+  cursor: pointer;
+}
+
+.ingredient_search .search-bar,
+.ingredient_search .search-bar input:focus,
+.ingredient_search .search-bar input:valid {
+  width: 100%;
+}
+
+.ingredient_search .search-bar input:focus,
+.ingredient_search .search-bar input:not(:focus) + .search-btn:focus {
+  outline: transparent;
+}
+
+.ingredient_search .search-bar {
+  margin: auto;
+  padding: 1.5em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 30em;
+}
+
+.ingredient_search .search-bar input {
+  background: transparent;
+  border-radius: 1.5em;
+  -webkit-box-shadow: 0 0 0 0.4em #171717 inset;
+          box-shadow: 0 0 0 0.4em #171717 inset;
+  padding: 0.75em;
+  -webkit-transform: translate(0.5em, 0.5em) scale(0.5);
+          transform: translate(0.5em, 0.5em) scale(0.5);
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.ingredient_search .search-bar input::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+.ingredient_search .search-bar input:focus,
+.ingredient_search .search-bar input:valid {
+  background: #fff;
+  border-radius: 0.375em 0 0 0.375em;
+  -webkit-box-shadow: 0 0 0 0.1em #d9d9d9 inset;
+          box-shadow: 0 0 0 0.1em #d9d9d9 inset;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.ingredient_search .search-btn {
+  background: #171717;
+  border-radius: 0 0.75em 0.75em 0 / 0 1.5em 1.5em 0;
+  padding: 0.75em;
+  position: relative;
+  -webkit-transform: translate(0.25em, 0.25em) rotate(45deg) scale(0.25, 0.125);
+          transform: translate(0.25em, 0.25em) rotate(45deg) scale(0.25, 0.125);
+  -webkit-transform-origin: 0 50%;
+          transform-origin: 0 50%;
+}
+
+.ingredient_search .search-btn:before,
+.ingredient_search .search-btn:after {
+  content: "";
+  display: block;
+  opacity: 0;
+  position: absolute;
+}
+
+.ingredient_search .search-btn:before {
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 0 0.2em #f1f1f1 inset;
+          box-shadow: 0 0 0 0.2em #f1f1f1 inset;
+  top: 0.75em;
+  left: 0.75em;
+  width: 1.2em;
+  height: 1.2em;
+}
+
+.ingredient_search .search-btn:after {
+  background: #f1f1f1;
+  border-radius: 0 0.25em 0.25em 0;
+  top: 51%;
+  left: 51%;
+  width: 0.75em;
+  height: 0.25em;
+  -webkit-transform: translate(0.2em, 0) rotate(45deg);
+          transform: translate(0.2em, 0) rotate(45deg);
+  -webkit-transform-origin: 0 50%;
+          transform-origin: 0 50%;
+}
+
+.ingredient_search .search-btn span {
+  display: inline-block;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+}
+
+.ingredient_search .search-bar input:focus + .search-btn,
+.ingredient_search .search-bar input:valid + .search-btn {
+  background: #06B400;
+  border-radius: 0 0.375em 0.375em 0;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.ingredient_search .search-bar input:focus + .search-btn:before,
+.ingredient_search .search-bar input:focus + .search-btn:after,
+.ingredient_search .search-bar input:valid + .search-btn:before,
+.ingredient_search .search-bar input:valid + .search-btn:after {
+  opacity: 1;
+}
+
+.ingredient_search .search-bar input:focus + .search-btn:hover,
+.ingredient_search .search-bar input:valid + .search-btn:hover,
+.ingredient_search .search-bar input:valid:not(:focus) + .search-btn:focus {
+  background: #06B400;
+}
+
+.ingredient_search .search-bar input:focus + .search-btn:active,
+.ingredient_search .search-bar input:valid + .search-btn:active {
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+}
+
+.ingredient_search .search-bar {
+  width: 100%;
+}
+/*# sourceMappingURL=ing_search.css.map */
